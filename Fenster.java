@@ -4,6 +4,12 @@ public class Fenster
    private int    preis;
    private boolean kippbar;
    
+   public Fenster (String neuMaterial, int neuPreis, boolean neuKippbar)
+   {
+       setMaterial(neuMaterial);
+       setPreis(neuPreis);
+       setKippbar(neuKippbar);
+   }
    public String getMaterial()
    {
        return material;
@@ -32,5 +38,10 @@ public class Fenster
    public void setKippbar(boolean neuKippbar)
    {
       kippbar = neuKippbar;
+   }
+   
+   public void printFenster()
+   {
+       System.out.println(material + " Fenster: " + preis + " EUR - " + kippbar);
    }
 }
