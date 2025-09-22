@@ -4,11 +4,11 @@ public class Fenster
    private int    preis;
    private boolean kippbar;
    
-   public Fenster (String neuMaterial, int neuPreis, boolean neuKippbar)
+   public Fenster (String material , int preis, boolean kippbar)
    {
-       setMaterial(neuMaterial);
-       setPreis(neuPreis);
-       setKippbar(neuKippbar);
+       setMaterial(material);
+       setPreis(preis);
+       setKippbar(kippbar);
    }
 
    public Fenster(int neuPreis)
@@ -18,10 +18,10 @@ public class Fenster
        setKippbar(true);
    }
    
-   public Fenster(String neuMaterial, int neuPreis)
+   public Fenster(String material, int preis)
    {
-       setMaterial(neuMaterial);
-       setPreis(neuPreis);
+       setMaterial(material);
+       setPreis(preis);
        setKippbar(true);
    }
    
@@ -47,19 +47,19 @@ public class Fenster
        return kippbar;
    }
    
-   public void setMaterial(String neuMaterial)
+   public void setMaterial(String material)
    {
-       material = neuMaterial;
+       this.material = material;
    }
    
-   public void setPreis(int neuPreis)
+   public void setPreis(int preis)
    {
-       preis = neuPreis;
+       this.preis = preis;
    }
    
-   public void setKippbar(boolean neuKippbar)
+   public void setKippbar(boolean kippbar)
    {
-      kippbar = neuKippbar;
+      this.kippbar = kippbar;
    }
    
    /*
@@ -72,36 +72,5 @@ public class Fenster
        System.out.println(material + " Fenster: " + preis + " EUR - " + kippbar);
    }
     
-   /*
-       public Fenster(String neuMaterial, int neuPreis, boolean neuKippbar)
-    {
-        setMaterial(neuMaterial);
-        setPreis(neuPreis);
-        setKippbar(neuKippbar);
-    }
-    
-
-    public Fenster(String neuMaterial, int neuPreis)
-    {
-        setMaterial(neuMaterial);
-        setPreis(neuPreis);
-        setKippbar(true);
-    }
-
-    public Fenster(String neuMaterial, boolean neuKippbar)
-    {
-        setMaterial(neuMaterial);
-        setPreis(399);
-        setKippbar(neuKippbar);
-    }
-    
-    /*
-    public Fenster()
-    {
-        setMaterial("Alu");
-        setPreis(399);
-        setKippbar(true);
-    }
-    */
 }  
  
