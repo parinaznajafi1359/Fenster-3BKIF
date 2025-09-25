@@ -1,8 +1,8 @@
 public class Fenster
 {
-   private String material;
-   private int    preis;
-   private boolean kippbar;
+   private String material;  //Alu Holz Kunstoff
+   private int    preis;    //Der Preis des Fenster inkl.Steuer in Eur
+   private boolean kippbar; // Kann das Fenster grkippt werden
    
    public Fenster (String material , int preis, boolean kippbar)
    {
@@ -49,6 +49,7 @@ public class Fenster
    
    public void setMaterial(String material)
    {
+       // Die Eigenschaft material wird mit dem Wert des ParametersneuMaterial überschreiben
        this.material = material;
    }
    
@@ -61,16 +62,38 @@ public class Fenster
    {
       this.kippbar = kippbar;
    }
-   
-   /*
-    material Fenster: preis EUR - kippbar
-    Alu Fenster: 399 EUR - true
-    Holz Fenster: 499 EUR - false
-   */
-   public void printFenster()
+   public void testen()
    {
-       System.out.println(material + " Fenster: " + preis + " EUR - " + kippbar);
+     //System.out.println(material.charAt(0)); 
+     //System.out.println(material.charAt(2));
+     System.out.println(material.indexOf(" "));
    }
+   
+   //     012345
+   //material="Alu35"
+   public String getRohstoff()
+   {
+       int pos;
+       
+       pos = material.indexOf(" ");     //3
+       return material.substring(0,pos);//0..3=>"Alu"
+   }
+     /*
+     material Fenster:preis EUR - kippbar
+     Alu Fenster:399 EUR - KIPPBAR
+     Holz Fenster: 499 EUR - nicht KIPPBAR
+     */
+    public void printFenster()
+  {
+    if (kippbar == true)
+    {
+       System.out.println(material + " Fenster: " + preis + " EUR - " + "KIPPBAR");
+    }
+    else
+    {
+       System.out.println(material + " Fenster: " + preis + " EUR - " + "nicht KIPPBAR");
+    }
+  }
     
 }  
  
